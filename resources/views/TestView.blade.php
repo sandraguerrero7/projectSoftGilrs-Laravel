@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1> Hola Bienvenido a mi app Laravel</h1>
+    <h2>Hola esta es mi vista TestView</h2>
 
 </body>
 </html>
