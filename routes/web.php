@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MyController\AdminController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TeachersController;
+use App\Http\Controllers\StudentController;
 
 /*
 Sin uso de controladores
@@ -49,10 +51,15 @@ Route::get('/employeer/{name}/{lastname?}', function ($name, $lastname = null) {
 
 */
 
+/*
 Route::get('/', [AdminController::class, 'index']);
 Route::get('/teacher', [AdminController::class, 'test']);
+*/
+Route::get('/home', [AdminController::class, 'index'])->name('inicio');
 
+Route::get('/student', [StudentController::class, 'studentList'])->name('estudiante');
 
+Route::get('/teacher', [TeachersController::class, 'teacherList'])->name('profesor');
 
 
 
